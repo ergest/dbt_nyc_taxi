@@ -7,7 +7,7 @@ dbt_nyc_taxi:
   target: dev
   outputs:
     dev:
-      path: /Users/ergestxheblati/github/dbt_nyc_taxi/dbt_nyc_taxi.ddb
+      path: /Users/ergestxheblati/github/dbt_nyc_taxi/nyc_taxi.ddb
       schema: main
       type: duckdb
       threads: 4
