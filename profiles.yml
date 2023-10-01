@@ -1,0 +1,16 @@
+version: 2
+
+config:
+  send_anonymous_usage_stats: false
+
+dbt_nyc_taxi:
+  target: dev
+  outputs:
+    dev:
+      path: /Users/ergestxheblati/github/dbt_nyc_taxi/nyc_taxi.ddb
+      schema: main
+      type: duckdb
+      threads: 4
+      extensions:
+        - httpfs
+        - parquet
