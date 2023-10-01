@@ -1,15 +1,21 @@
-Welcome to your new dbt project!
+# Welcome to the NYC Taxi Trip dbt project!
 
-### Using the starter project
+## Initial Setup
 
-Try running the following commands:
-- dbt run
-- dbt test
+To set up the project you'll need a Python environment set up with dbt-duckdb. I use Conda but you can use whatever you like
 
+### Set up the initial dbt environment
+1. Create a new conda environment for dbt `conda create -n dbt python=3.11`
+2. Activate the new environment `conda activate dbt`
+3. Install `dbt-core` and `dbt-duckdb`: `pip install dbt-duckdb`
+4. Verify that `dbt` has been installed via: `dbt --version`
+5. Clone this repo: `git clone https://github.com/ergest/dbt_nyc_taxi.git`
 
-### Resources:
-- Learn more about dbt [in the docs](https://docs.getdbt.com/docs/introduction)
-- Check out [Discourse](https://discourse.getdbt.com/) for commonly asked questions and answers
-- Join the [chat](https://community.getdbt.com/) on Slack for live discussions and support
-- Find [dbt events](https://events.getdbt.com) near you
-- Check out [the blog](https://blog.getdbt.com/) for the latest news on dbt's development and best practices
+### Build the database
+1. Build the database: `dbt run` or `dbt build`
+
+### Use the database
+1. Install DuckDB. See [here](https://duckdb.org/#quickinstall)
+2. Open the database in DuckDB CLI or the client of your choice. `duckdb nyc_taxi.ddb`
+3. View the tables/views built: `D show tables;`
+4. Query a specific table: `D select * from for_hire_verhicle_trips_2021`
