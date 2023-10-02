@@ -11,9 +11,11 @@ To set up the project you'll need a Python environment set up with dbt-duckdb. I
 4. Verify that `dbt` has been installed via: `dbt --version`
 5. Clone this repo: `git clone https://github.com/ergest/dbt_nyc_taxi.git`
 
-### Build the database
-1. Build all the models in the database: `dbt run` or `dbt build`
-2. Build a specific model: `dbt run -m <model_name` or `dbt -s <model_name>`
+### Download the NYC trip data and build the database
+1. Make the download script executable: `chmod +x scripts/download_data.sh`
+2. Run the script to download the data and specify the download location: `./scripts/download_data.sh nyc_taxi_data`
+3. Build all the models in the database: `dbt run` or `dbt build`
+4. Build a specific model that you created: `dbt run -m <model_name` or `dbt -s <model_name>`
 
 ### Use the database
 1. Install DuckDB. See [here](https://duckdb.org/#quickinstall)
