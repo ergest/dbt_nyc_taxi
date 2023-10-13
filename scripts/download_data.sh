@@ -1,7 +1,7 @@
 #!/bin/bash
 
 start_year=2021
-end_year=2022
+end_year=2023
 
 patterns=("yellow" "green" "fhv")
 
